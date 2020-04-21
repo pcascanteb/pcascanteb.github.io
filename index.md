@@ -154,7 +154,7 @@
         <td><a href="https://github.com/pcascanteb/VAE-ImgCaptioning" target="_blank">Variational Image Captioning Using Deterministic Attention</a>.<br>
         Paola Cascante-Bonilla, Hyun Jae Cho, Alphonse N Akakpo.<br>
         [<a href="http://www.cs.virginia.edu/~pc9za/projects/VIC_NLP.pdf" target="_blank">report</a>] [<a href="https://github.com/pcascanteb/VAE-ImgCaptioning" target="_blank">code</a>]</td>
-        <td></td>
+        <td></td><td></td><td></td>
       </tr>
     </tbody>
   </table>
