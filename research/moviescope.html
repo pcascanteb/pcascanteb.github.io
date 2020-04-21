@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Moviescope</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" media="screen,projection">
+
+  <script>
+          var e = document.getElementById("myselect");
+          var strUser = e.options[e.selectedIndex].value
+  </script>
+</head>
+<body>
+  <div class="section grey lighten-3">
+      <h3 class="header center blue-text">Moviescope: Large-scale Analysis of <br> Movies using Multiple Modalities</h3>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="row center">
+        <h5 class="header col s12 light">Film media is a rich form of artistic expression. <br>Unlike photography, and short videos, movies contain a storyline that <br>is deliberately complex and intricate in order to engage its audience.
+   <br><br>In this paper we introduce <b>Moviescope</b>, a new large-scale dataset of <br>5,000 movies with corresponding video trailers, posters, plots and metadata.
+  </h5>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container grey lighten-4">
+    <div class="section">
+      <div class="row">
+        <div class="col s8 m6">
+          <div class="card">
+            <div class="card-image ">
+              <img class="responsive-img" src="ms.gif">
+            </div>
+          </div>
+        </div>
+        <div class="col s8 m6">
+          <div class="content">
+            <div class="content">
+              <p class="black-text">We present a large scale study comparing the effectiveness of visual, audio, text, and metadata-based features for predicting high-level information about movies such as their genre or estimated budget. We demonstrate the usefulness of content-based methods in this domain in contrast to human-based and metadata-based predictions in the era of deep learning. Additionally, we provide a comprehensive study of temporal feature aggregation methods for representing video and text and find that simple pooling operations are effective in this domain. We also show to what extent different modalities are complementary to each other.
+                <br>
+                <div class="right">
+                <a href="https://arxiv.org/abs/1908.03180" class="btn-floating blue"><i class="small material-icons">library_books</i></a>
+              </div>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container white lighten-4">
+  <!-- <div class="section"> -->
+    <div class="row">
+      <h5 class="header col s12 light">
+      <b>Dataset</b>
+      </h5>
+      <div class="col s8 m12">
+        Moviescope is based on the <a href='https://www.kaggle.com/carolzhangdc/imdb-5000-movie-dataset'>IMDB 5000 dataset</a> consisting of 5.043 movie records. This dataset was released under an Open Database License as part of a Kaggle Competition. We augmented this dataset by crawling video trailers associated with each movie from YouTube and text plots from Wikipedia.
+      </div>
+    </div>
+  <!-- </div> -->
+    <div class="row">
+      <div class="col s8 m6">
+          <div class="card-image ">
+            <br>
+            <img class="responsive-img" src="msComparison.JPG">
+          </div>
+      </div>
+      <div class="content col s8 m6 blue-text">
+          <a href="http://www.cs.virginia.edu/~pcascante/Moviescope/VideoFeatures.zip" class="btn-floating blue"><i class="small material-icons">movie_filter</i></a> <b>Video Features</b> <br><br>
+          <a href="http://www.cs.virginia.edu/~pcascante/Moviescope/PosterFeatures.zip" class="btn-floating blue"><i class="small material-icons">photo</i></a> <b>Poster Features</b> <br><br>
+          <a href="http://www.cs.virginia.edu/~pcascante/Moviescope/Metadata_Splits_LabelsText.zip" class="btn-floating blue"><i class="small material-icons">receipt</i></a> <b>Train, Validation and Test Splits with Plots</b> <br><br>
+      </div>
+    </div>
+</div>
+
+<div class="container white lighten-4">
+  <!-- <div class="section"> -->
+    <div class="row">
+      <h5 class="header col s12 light">
+      <b>Modal Representations</b>
+      </h5>
+      <div class="col s12 m12">
+        We used video, text, audio, posters and metadata representations for movie genre prediction and movie budget estimation.<br><br>
+        <!-- <i><u>fastText</u></i>: this mechanism works by computing a feature representation <i>&psi;<sub>t</sub></i> using a simple global average time-pooling operation over vector representations <i>w<sub>j</sub></i> corresponding to unigrams (word embeddings), bigrams or trigrams. In the case of bigrams or trigrams, a temporal convolution layer is used to aggregate word embeddings among adjacent words. In the case of unigrams we would have:
+        <div class="center"><img class="responsive-img" src="msM1.JPG" style="width:200px;height:70px;"><br></div>
+        where <i>N</i> is the length of the sequence, and <i>W<sub>t</sub>,b<sub>t</sub></i> are the parameters of an affine layer that produces a task-specific number of outputs.<br>
+        <br><i><u>fastVideo</u></i>: an average time-pooling operation is performed over the outputs of a convolutional neural network applied to individual video frames. We take 200 video frames subsampled by processing one frame every 10 frames, and input these frames into a
+        pretrained VGG-16 convolutional neural network pretrained on Imagenet and use the activations from the penultimate layer of this model. This results in a feature encoding
+        vector <i>f<sub>i</sub></i> of size 4096. In
+        the case of <i>frame unigrams</i> we would have: <br>
+        <div class="center"><img class="responsive-img" src="msM2.JPG" style="width:200px;height:70px;"><br></div>
+        where <i>M</i> is the number of frames in the sequence, and
+        <i>W<sub>v</sub>,b<sub>v</sub></i> are the parameters of an affine layer that produces
+        a task-specific number of outputs.<br><br> -->
+        <div class="center">
+          <img class="responsive-img" src="msModel.JPG" style="width:670px;height:550px;">
+        </div>
+        <!-- <br><i><u>audio</u></i>: we extract the audio from each movie trailer and compute the log-<i>mel</i> scaled power spectrogram to represent
+the power spectral density of the sound in a log-frequency scale. The number of mel-bins is 128
+and the hop-size is 256, resulting in 4 matrices of shape 128x1407. We stack those representations and use them
+as the inputs of a Convolutional Recurrent Neural Network
+(CRNN) that consists in four layers of spatial convolutions
+followed by two LSTM layers.
+        <br><br><i><u>posters</u></i>: we simply the same pretrained VGG-16 network to precompute the features from the penultimate layer to represent
+each poster with a 4096-dimensional vector and compute prediction scores as <i>&psi;<sub>p</sub> = W<sub>p</sub> · f<sub>p</sub> + b<sub>p</sub></i>,
+  where <i>W<sub>p</sub></i> and <i>b<sub>p</sub></i> are the parameters of an affine
+transformation layer from
+input representation <i>fp</i> to a task-specific number of logit
+unnormalized output scores.
+        <br><br><i><u>metadata</u></i>: categorical features such as director, language, and content-rating
+are numerically-encoded, and appended alongside numeric
+features such as the number of faces in the poster, duration, number of likes on facebook. The words in the movie
+title are represented by averaging their word embeddings.
+For our single-modality experiments we use this feature on
+top of a random forest classifier to obtain scores m for
+movie genre prediction. We additionally run a comparison with XGBoost. -->
+      </div>
+    </div>
+</div>
+
+<div class="container white lighten-4">
+  <!-- <div class="section"> -->
+    <div class="row">
+      <h5 class="header col s12 light">
+      <b>Multimodal Fusion</b>
+      </h5>
+      <div class="col s12 m12">
+        In order to combine multiple modalities, we use the output scores from the models associated with each individual
+        modality as inputs to a weighted regression in order to obtain final movie genre predictions. Intuitively, these weights in the linear combination can be
+        interpreted as the contribution of each modality toward predicting a genre.
+        <div class="center">
+          <img class="responsive-img" src="msModalities.JPG" >
+        </div>
+        <br>Some results:<br>
+          <div class="center">
+            <img class="responsive-img" src="msResults1.JPG" >
+          </div>
+          <!-- We observed that the modal attention weights corresponding to text are higher than the other
+          modalities, which is consistent with individually observed
+          results, but we also observe clear differences across movie
+          genres. For instance, video seems the best predictor for
+          animation where the model gives more attention to the
+          visual features. While trailer-based prediction does not outperform plot-based predictions, in combination it still improves the overall model accuracy for almost all categories. -->
+
+          <br>
+      </div>
+      <h5 class="header col s12 light">
+        +Automatic Budget Estimation & Human-based vs Content-based Predictions
+      </h5>
+      <br>
+      <p></p>
+      <!-- <h5 class="header col s12 light">
+        <b>Paper & Pretrained Features</b>
+      </h5> -->
+      <div class="center">
+        <br>
+        <br>
+        <br>
+        <table class="highlight centered">
+          <tbody>
+            <tr>
+              <td><a href="https://arxiv.org/abs/1908.03180" class="btn-floating blue"><i class="small material-icons">library_books</i></a> <br>Paper</td>
+              <td><a href="http://www.cs.virginia.edu/~pcascante/Moviescope/VideoFeatures.zip" class="btn-floating blue"><i class="small material-icons">movie_filter</i></a> <br>Video Features</td>
+              <td><a href="http://www.cs.virginia.edu/~pcascante/Moviescope/PosterFeatures.zip" class="btn-floating blue"><i class="small material-icons">photo</i></a> <br>Poster Features</td>
+              <td><a href="http://www.cs.virginia.edu/~pcascante/Moviescope/Metadata_Splits_LabelsText.zip" class="btn-floating blue"><i class="small material-icons">receipt</i></a> <br>Train, Validation and Test Splits with Plots</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br>
+      <br>
+      <div class="card">
+      <blockquote font-size="large">
+        <font face="Courier New">
+        @article{2019Moviescope, <br>
+          title={Moviescope: Large-scale Analysis of Movies using Multiple Modalities},<br>
+          author={Paola Cascante-Bonilla and Kalpathy Sitaraman and Mengjia Luo and Vicente Ordonez},<br>
+          journal={ArXiv},<br>
+          year={2019},<br>
+          volume={abs/1908.03180}<br>
+        }
+        </font>
+      </blockquote>
+    </div>
+    </div>
+</div>
+
+<br>
+<hr>
+<p style="font-size:1vw"> [38] H. Zhou, T. Hermans, A. V. Karandikar, and J. M. Rehg.
+Movie genre classification via scene categorization. In Proceedings of the 18th ACM International Conference on Multimedia, MM ’10, pages 747–750, New York, NY, USA,
+2010. ACM <br>
+[27] G. S. Simoes, J. Wehrmann, R. C. Barros, and D. D. Ruiz.
+Movie genre classification with convolutional neural networks. In 2016 International Joint Conference on Neural
+Networks, IJCNN 2016, Vancouver, BC, Canada, July 24-29,
+2016, pages 259–266, 2016.
+</p>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  </body>
+</html>
