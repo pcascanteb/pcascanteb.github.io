@@ -82,9 +82,9 @@
       </tr>
       <tr style="border-bottom: 0;">
         <td style="vertical-align: top;"><img src="1Res.JPG" width="150" height="63"></td>
-        <td><a href="http://www.cs.virginia.edu/~pc9za/research/moviescope.html" target="_blank">Moviescope: Large-scale Analysis of Movies using Multiple Modalities</a>.<br>
+        <td><a href="http://paolacascante.com/research/moviescope.html" target="_blank">Moviescope: Large-scale Analysis of Movies using Multiple Modalities</a>.<br>
         Paola Cascante-Bonilla,  Kalpathy Sitaraman, Mengjia Luo, Vicente Ordonez.<br>
-        [<a href="https://arxiv.org/abs/1908.03180" target="_blank">arxiv</a>] [<a href="http://www.cs.virginia.edu/~pc9za/research/moviescope.html" target="_blank">project page</a>] [<a href="https://techxplore.com/news/2019-08-features-movie-genre.html?fbclid=IwAR1oJnZw5WxkcDfaIMOmxZ4Oj9xyuXbkybQhep-aJgcTrRRNwYcooVSGOsA" target="_blank">techxplore article</a>]</td>
+        [<a href="https://arxiv.org/abs/1908.03180" target="_blank">arxiv</a>] [<a href="http://paolacascante.com/research/moviescope.html" target="_blank">project page</a>] [<a href="https://techxplore.com/news/2019-08-features-movie-genre.html" target="_blank">techxplore article</a>]</td>
         <td></td>
       </tr>
       <tr style="border-bottom: 0;">
